@@ -145,10 +145,10 @@ export default function Footer() {
                     href={item.href}
                     target={item.isExternal ? '_blank' : undefined}
                     rel={item.isExternal ? 'noopener noreferrer' : undefined}
-                    className="flex items-start gap-2 py-0.5 text-offwhite hover:text-accent transition-colors"
+                    className="flex items-start gap-2 py-0.5 text-offwhite hover:text-accent transition-colors min-w-0"
                   >
                     <img src={item.icon} alt="" className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" />
-                    <span className="font-inter text-[11px] sm:text-xs leading-[14px] break-words">{item.text}</span>
+                    <span className="font-inter text-[11px] sm:text-xs leading-[14px] break-all min-w-0">{item.text}</span>
                   </a>
                 ))}
               </div>
