@@ -11,50 +11,47 @@ export default function ContactPageHero() {
   return (
     <section
       id="contact-top"
-      className="relative w-full h-[236px] lg:h-[465px] overflow-hidden"
+      className="relative w-full h-[236px] lg:h-[465px] overflow-hidden flex flex-col justify-between"
     >
-      {/* Background image */}
-      <img
-        src={heroBg}
-        alt="Nigerian farmland background"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
-      />
-
-      {/* Exact color grading gradient overlay matching Landing Page */}
-      <div
-        className="absolute inset-0 pointer-events-none select-none"
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.21) 39.79%, rgba(51,51,51,0.78) 58.83%, rgba(30,30,30,0.80) 67.71%)',
-        }}
-      />
+      {/* Background image & Exact color grading gradient overlay matching Landing Page */}
+      <div className="absolute inset-0 pointer-events-none select-none">
+        <img
+          src={heroBg}
+          alt="Nigerian farmland background"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(0,0,0,0.21) 39.79%, rgba(51,51,51,0.78) 58.83%, rgba(30,30,30,0.80) 67.71%)',
+          }}
+        />
+      </div>
 
       {/* Navbar — top aligned */}
       <Navbar activePage="contact" />
 
-      {/* Page Title + Truck Globe Graphic — pinned near bottom */}
-      <div className="absolute bottom-2 lg:bottom-8 left-0 right-0 z-10 px-6 lg:px-24 flex items-end justify-center pointer-events-none">
-        <div className="relative w-full max-w-[1248px] flex items-center justify-center">
-          {/* Gold Righteous Title — Perfectly centered */}
-          <h1
-            className="font-righteous text-accent leading-none text-center tracking-wide w-full z-10"
-            style={{
-              fontSize: 'clamp(36px, 7vw, 96px)',
-              textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
-            }}
-          >
-            CONTACT US
-          </h1>
+      {/* Page Title Container */}
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 pt-0 lg:pt-[50px] pb-6 sm:pb-8 lg:pb-12 flex-1 flex items-center justify-center">
+        <h1
+          className="font-righteous text-accent leading-none text-center tracking-wide w-full z-10"
+          style={{
+            fontSize: 'clamp(36px, 7vw, 96px)',
+            textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
+          }}
+        >
+          CONTACT US
+        </h1>
+      </div>
 
-          {/* Truck + Globe graphic — positioned on the right */}
-          <div className="absolute right-0 bottom-0 translate-y-1 sm:translate-y-2 lg:translate-y-4 w-[80px] h-[70px] sm:w-[120px] sm:h-[100px] lg:w-[260px] lg:h-[200px] flex-shrink-0">
-            <img
-              src={heroTruckGlobe}
-              alt="Kunbiola Logistics Truck and Globe"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
+      {/* Truck + Globe graphic — positioned at bottom right of hero section */}
+      <div className="absolute right-2 sm:right-6 lg:right-16 xl:right-24 bottom-1 sm:bottom-3 lg:bottom-6 w-[110px] h-[99px] sm:w-[155px] sm:h-[140px] md:w-[200px] md:h-[180px] lg:w-[290px] lg:h-[261px] flex-shrink-0 pointer-events-none select-none z-10">
+        <img
+          src={heroTruckGlobe}
+          alt="Kunbiola Logistics Truck and Globe"
+          className="w-full h-full object-contain"
+        />
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-24 pt-[50px] pb-12 sm:pb-14 md:pb-16 lg:pb-12 xl:pb-8 flex flex-col justify-start xl:justify-between flex-1">
         
         {/* Main hero body container */}
-        <div className="relative flex flex-col lg:flex-row items-start lg:items-end justify-between w-full gap-[50px] md:gap-10 lg:gap-0 mt-0 xl:mt-[50px] mb-0 xl:mb-2">
+        <div className="relative flex flex-col lg:flex-row items-start lg:items-end justify-between w-full gap-[50px] md:gap-10 lg:gap-0 mt-0 mb-0 xl:mb-2">
           
           {/* Left Column: Heading, Subtext, Action Buttons (16px gap mobile, 48px gap desktop) */}
           <div className="flex flex-col gap-[16px] sm:gap-6 md:gap-8 lg:gap-[28px] w-full max-w-full lg:max-w-[989px] z-10">
@@ -62,30 +62,30 @@ export default function HeroSection() {
               From cashew nuts to cocoa, sesame seeds to minerals, Kunbiola connects local producers to international buyers with unmatched reliability.
             </p>
 
-            {/* Action Buttons Row matching Figma node 2035:511 & 2067:1251 */}
-            <div className="flex flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-[24px] w-full max-w-[345px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[613px]">
+            {/* Action Buttons Row */}
+            <div className="flex flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-[24px] w-full max-w-[345px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[554px]">
               <Link
                 to="/products"
-                className="flex-1 h-[46px] sm:h-[48px] md:h-[52px] lg:h-[56px] xl:h-[60px] lg:w-[290px] p-[8px] flex items-center justify-center border border-[#F7F7F7] rounded-[20px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] text-[#F7F7F7] font-inter font-normal text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] whitespace-nowrap hover:bg-white/10 active:scale-95 transition-all"
+                className="flex-1 h-[38px] sm:h-[40px] md:h-[42px] lg:h-[45px] xl:h-[45px] lg:w-[265px] px-3 lg:px-4 flex items-center justify-center border border-[#F7F7F7] rounded-[20px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] text-[#F7F7F7] font-inter font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap hover:bg-white/10 active:scale-95 transition-all"
               >
                 PRODUCTS
               </Link>
               <button
                 type="button"
                 onClick={openModal}
-                className="flex-1 h-[46px] sm:h-[48px] md:h-[52px] lg:h-[56px] xl:h-[60px] lg:w-[290px] p-[8px] flex items-center justify-center bg-[#374C3B] rounded-[20px] drop-shadow-[0px_4px_2px_rgba(0,0,0,0.25)] text-[#F7F7F7] font-inter font-normal text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] whitespace-nowrap hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+                className="flex-1 h-[38px] sm:h-[40px] md:h-[42px] lg:h-[45px] xl:h-[45px] lg:w-[265px] px-3 lg:px-4 flex items-center justify-center bg-[#374C3B] rounded-[20px] drop-shadow-[0px_4px_2px_rgba(0,0,0,0.25)] text-[#F7F7F7] font-inter font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap hover:brightness-110 active:scale-95 transition-all cursor-pointer"
               >
                 REQUEST A QUOTE
               </button>
             </div>
           </div>
 
-          {/* Right Column (Desktop) / Bottom Graphic (Mobile/Tablet): Truck & Globe Picture 2 */}
-          <div className="w-full max-w-[290px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-[440px] xl:max-w-[540px] 2xl:max-w-[604px] lg:absolute lg:right-0 lg:bottom-0 flex items-center justify-center lg:justify-end mx-auto lg:mx-0 self-center lg:self-end flex-shrink-0 pointer-events-none select-none">
+          {/* Right Column (Desktop) / Bottom Graphic (Mobile/Tablet): Truck & Globe */}
+          <div className="w-[290px] h-[261px] sm:w-[340px] sm:h-[306px] md:w-[400px] md:h-[360px] lg:w-[450px] lg:h-[405px] xl:w-[500px] xl:h-[450px] lg:absolute lg:right-0 lg:bottom-0 flex items-center justify-center lg:justify-end mx-auto lg:mx-0 self-center lg:self-end flex-shrink-0 pointer-events-none select-none">
             <img
               src={heroTruckGlobe}
               alt="Global logistics delivery truck and globe"
-              className="w-full h-auto max-h-[260px] sm:max-h-[300px] md:max-h-[360px] lg:max-h-[44vh] xl:max-h-[50vh] 2xl:max-h-[543px] object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
         </div>

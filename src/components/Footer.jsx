@@ -35,7 +35,7 @@ const contactItems = [
 function FooterLogo({ className = "w-[149px] h-[33px]" }) {
   return (
     <svg
-      viewBox="12.4505 10 190.8545 43"
+      viewBox="10 10 193.5 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
