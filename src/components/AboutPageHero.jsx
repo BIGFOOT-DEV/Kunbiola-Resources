@@ -11,7 +11,7 @@ export default function AboutPageHero() {
   return (
     <section
       id="about-top"
-      className="relative w-full h-[236px] lg:h-[465px] overflow-hidden flex flex-col justify-between"
+      className="relative w-full h-auto overflow-hidden flex flex-col justify-between"
     >
       {/* Background image & Exact color grading gradient overlay matching Landing Page */}
       <div className="absolute inset-0 pointer-events-none select-none">
@@ -33,25 +33,21 @@ export default function AboutPageHero() {
       <Navbar activePage="about" />
 
       {/* Page Title Container */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 pt-0 lg:pt-[50px] pb-6 sm:pb-8 lg:pb-12 flex-1 flex items-center justify-center">
-        <h1
-          className="font-righteous text-accent leading-none text-center tracking-wide w-full z-10"
-          style={{
-            fontSize: 'clamp(36px, 7vw, 96px)',
-            textShadow: '0px 4px 12px rgba(0,0,0,0.6)',
-          }}
-        >
-          ABOUT US
-        </h1>
-      </div>
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 flex flex-col justify-start">
+        <div className="relative w-full max-w-[1248px] mx-auto flex items-center justify-center min-h-[81px] lg:min-h-[234px]">
+          <h1 className="font-righteous text-accent text-[24px] sm:text-[32px] md:text-[40px] lg:text-[46px] xl:text-[56px] 2xl:text-[64px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[1.05] xl:leading-[64px] tracking-normal uppercase text-center w-full z-10 drop-shadow-md">
+            ABOUT US
+          </h1>
 
-      {/* Truck + Globe graphic — positioned at bottom right of hero section */}
-      <div className="absolute right-2 sm:right-6 lg:right-16 xl:right-24 bottom-1 sm:bottom-3 lg:bottom-6 w-[110px] h-[99px] sm:w-[155px] sm:h-[140px] md:w-[200px] md:h-[180px] lg:w-[290px] lg:h-[261px] flex-shrink-0 pointer-events-none select-none z-10">
-        <img
-          src={heroTruckGlobe}
-          alt="Kunbiola Logistics Truck and Globe"
-          className="w-full h-full object-contain"
-        />
+          {/* Truck + Globe graphic — prominent beside h1 text without shifting center */}
+          <div className="absolute right-0 sm:right-4 md:right-8 lg:right-12 xl:right-16 top-1/2 -translate-y-1/2 w-[90px] h-[81px] sm:w-[130px] sm:h-[117px] md:w-[160px] md:h-[144px] lg:w-[220px] lg:h-[198px] xl:w-[260px] xl:h-[234px] flex-shrink-0 pointer-events-none select-none z-20">
+            <img
+              src={heroTruckGlobe}
+              alt="Kunbiola Logistics Truck and Globe"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

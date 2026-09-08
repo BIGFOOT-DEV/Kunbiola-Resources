@@ -11,7 +11,7 @@ export default function ProductsPageHero() {
   return (
     <section
       id="products-top"
-      className="relative w-full h-auto lg:h-[465px] min-h-[236px] overflow-hidden flex flex-col justify-between"
+      className="relative w-full h-auto overflow-hidden flex flex-col justify-between"
     >
       {/* Background image & Exact color grading gradient overlay matching Landing Page */}
       <div className="absolute inset-0 pointer-events-none select-none">
@@ -33,14 +33,8 @@ export default function ProductsPageHero() {
       <Navbar activePage="products" />
 
       {/* Page title container — exact 50px gap below navbar */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 pt-[50px] pb-6 sm:pb-8 lg:pb-12 flex-1 flex items-center justify-center">
-        <h1
-          className="font-righteous text-accent leading-none text-center tracking-wide w-full"
-          style={{
-            fontSize: 'clamp(36px, 7vw, 96px)',
-            textShadow: '0px 4px 12px rgba(0,0,0,0.6)',
-          }}
-        >
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 pt-[50px] pb-10 sm:pb-12 lg:pb-16 flex flex-col justify-start items-center">
+        <h1 className="font-righteous text-accent text-[24px] sm:text-[32px] md:text-[40px] lg:text-[46px] xl:text-[56px] 2xl:text-[64px] leading-[30px] sm:leading-[38px] md:leading-[46px] lg:leading-[1.05] xl:leading-[64px] tracking-normal uppercase text-center w-full z-10 drop-shadow-md">
           PRODUCTS
         </h1>
       </div>
