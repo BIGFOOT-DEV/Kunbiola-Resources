@@ -37,7 +37,7 @@ export default function ContactPageHero() {
         <div className="relative w-full max-w-[1248px] flex items-center justify-center">
           {/* Gold Righteous Title — Perfectly centered */}
           <h1
-            className="font-righteous text-accent leading-none text-center tracking-wide w-full"
+            className="font-righteous text-accent leading-none text-center tracking-wide w-full z-10"
             style={{
               fontSize: 'clamp(36px, 7vw, 96px)',
               textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
