@@ -20,7 +20,7 @@ export default function Navbar({ activePage = 'home' }) {
   return (
     <>
       {/* ── DESKTOP NAV (lg+) ── */}
-      <nav className="absolute top-0 left-0 right-0 z-50 hidden lg:flex items-center justify-between px-24 pt-8">
+      <nav className="relative z-50 hidden lg:flex items-center justify-between w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 pt-6 lg:pt-8">
         {/* Logo */}
         <Link to="/" className="w-[115px] h-[115px] flex-shrink-0 block">
           <img src={logo} alt="Kunbiola Resources Logo" className="w-full h-full object-contain" />
@@ -64,33 +64,33 @@ export default function Navbar({ activePage = 'home' }) {
             </a>
           </div>
 
-          {/* Nav links */}
-          <div className="flex items-center bg-mint rounded-[20px]">
+          {/* Nav links matching Figma node 2142:1168 */}
+          <div className="flex items-center bg-mint rounded-[20px] pl-2 xl:pl-4">
             <a
               href={homeHref}
-              className={`px-[14px] py-[10px] text-primary font-inter text-base whitespace-nowrap ${
-                activePage === 'home' ? 'underline underline-offset-2' : ''
+              className={`px-4 xl:px-6 py-3 text-primary font-inter text-base xl:text-[20px] whitespace-nowrap transition-all ${
+                activePage === 'home' ? 'underline underline-offset-4' : 'hover:opacity-75'
               }`}
             >HOME</a>
 
             <Link
               to="/products"
-              className={`px-[14px] py-[10px] text-primary font-inter text-base whitespace-nowrap ${
-                activePage === 'products' ? 'underline underline-offset-2' : ''
+              className={`px-4 xl:px-6 py-3 text-primary font-inter text-base xl:text-[20px] whitespace-nowrap transition-all ${
+                activePage === 'products' ? 'underline underline-offset-4' : 'hover:opacity-75'
               }`}
             >PRODUCTS</Link>
 
             <Link
               to="/about"
-              className={`px-[14px] py-[10px] text-primary font-inter text-base whitespace-nowrap ${
-                activePage === 'about' ? 'underline underline-offset-2' : ''
+              className={`px-4 xl:px-6 py-3 text-primary font-inter text-base xl:text-[20px] whitespace-nowrap transition-all ${
+                activePage === 'about' ? 'underline underline-offset-4' : 'hover:opacity-75'
               }`}
             >ABOUT US</Link>
 
             <Link
               to="/contact"
-              className={`bg-btn-hover text-offwhite font-inter font-bold text-base px-6 py-[10px] rounded-[20px] shadow-btn whitespace-nowrap h-[44px] flex items-center justify-center w-[200px] ${
-                activePage === 'contact' ? 'ring-2 ring-offwhite/40' : ''
+              className={`bg-primary text-offwhite font-inter font-normal text-base xl:text-[24px] px-6 xl:px-8 py-2 xl:py-3 rounded-[20px] drop-shadow-[0px_4px_2px_rgba(0,0,0,0.25)] whitespace-nowrap flex items-center justify-center min-w-[180px] xl:w-[292px] h-[50px] xl:h-[60px] hover:brightness-110 active:scale-95 transition-all ${
+                activePage === 'contact' ? 'ring-2 ring-offwhite/50' : ''
               }`}
             >
               CONTACT US
@@ -100,7 +100,7 @@ export default function Navbar({ activePage = 'home' }) {
       </nav>
 
       {/* ── MOBILE NAV BAR (< lg) ── */}
-      <nav className="absolute top-0 left-0 right-0 z-50 flex lg:hidden items-start justify-between px-6 pt-5">
+      <nav className="relative z-50 flex lg:hidden items-start justify-between w-full px-6 pt-5">
         {/* Logo – matching Figma mobile */}
         <Link to="/" className="w-[70px] h-[70px] flex-shrink-0 block mt-1">
           <img src={logo} alt="Kunbiola Resources Logo" className="w-full h-full object-contain" />

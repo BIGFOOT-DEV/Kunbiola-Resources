@@ -11,7 +11,7 @@ export default function ProductsPageHero() {
   return (
     <section
       id="products-top"
-      className="relative w-full h-[236px] lg:h-[465px] overflow-hidden bg-primary"
+      className="relative w-full h-[236px] lg:h-[465px] overflow-hidden"
     >
       {/* Background image */}
       <img
@@ -20,12 +20,12 @@ export default function ProductsPageHero() {
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
       />
 
-      {/* Dark gradient overlay for visual depth and text legibility */}
+      {/* Exact color grading gradient overlay matching Landing Page */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none select-none"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.30) 45%, rgba(15,15,15,0.78) 80%, rgba(0,0,0,0.88) 100%)',
+            'linear-gradient(to bottom, rgba(0,0,0,0.21) 39.79%, rgba(51,51,51,0.78) 58.83%, rgba(30,30,30,0.80) 67.71%)',
         }}
       />
 
